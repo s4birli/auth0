@@ -6,7 +6,7 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, loginWithPopup } = useAuth0();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const Login: React.FC = () => {
     // } catch (error) {
     //   // Handle error
     // }
-    loginWithRedirect();
+    loginWithPopup();
   };
 
   // return (
